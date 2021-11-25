@@ -17,6 +17,7 @@ const FormUserDetails = (props) => {
 
           <InputGroup>
             <Form.Check
+              className="m-4"
               name={"qOne"}
               value={"B2C"}
               checked={values.businessType === "B2C"}
@@ -25,6 +26,7 @@ const FormUserDetails = (props) => {
               label={"B2C"}
             />
             <Form.Check
+            className="m-4"
               name={"qOne"}
               checked={values.businessType === "B2B"}
               value={"B2B"}
@@ -33,6 +35,7 @@ const FormUserDetails = (props) => {
               label={"B2B"}
             />
             <Form.Check
+              className="m-4"
               name={"qOne"}
               value={"Both"}
               checked={values.businessType === "Both"}
@@ -50,6 +53,7 @@ const FormUserDetails = (props) => {
 
               <InputGroup>
                 <Form.Check
+                  className="m-4"
                   name={"qTwo"}
                   value={"Yes"}
                   checked={values.ageBracket === "Yes"}
@@ -58,6 +62,7 @@ const FormUserDetails = (props) => {
                   label={"Yes"}
                 />
                 <Form.Check
+                  className="m-4"
                   name={"qTwo"}
                   checked={values.ageBracket === "No"}
                   value={"No"}
@@ -77,6 +82,7 @@ const FormUserDetails = (props) => {
 
               <InputGroup>
                 <Form.Check
+                    className="m-4"
                   name={"qThree"}
                   value={"Yes"}
                   checked={values.allIndustries === "Yes"}
@@ -85,6 +91,7 @@ const FormUserDetails = (props) => {
                   label={"Yes"}
                 />
                 <Form.Check
+                    className="m-4"
                   name={"qThree"}
                   checked={values.allIndustries === "No"}
                   value={"No"}
