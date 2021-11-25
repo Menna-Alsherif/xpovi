@@ -43,11 +43,11 @@ const Confirm = (props) => {
         </ListGroup>
 
         <br />
-        <Button onClick={back} className="w-50 btn btn-lg">
+        <Button onClick={back} className="w-50 m-4 btn btn-lg">
           Go Back
         </Button>
 
-        <Button onClick={next} className="w-50 btn btn-lg">
+        <Button onClick={next} className="w-50 m-4 btn btn-lg">
           Confirm and Continue
         </Button>
       </Fragment>
