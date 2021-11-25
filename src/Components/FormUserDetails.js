@@ -109,7 +109,7 @@ const FormUserDetails = (props) => {
 
           <br />
 
-          <Button onClick={next} className="w-50 btn btn-lg">
+          <Button onClick={next} className="w-50 m-4 btn btn-lg">
             Continue
           </Button>
         </Fragment>
