@@ -3,7 +3,7 @@ import { InputGroup, FormControl, Form, Button } from "react-bootstrap";
 
 const FormPersonalDetails = (props) => {
 
-  const [disableValue, setDisableValue] = useState(false);
+  const [disableValue, setDisableValue] = useState(true);
 
   const next = (e) => {
     console.log(props.values);
