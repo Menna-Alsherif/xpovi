@@ -33,6 +33,7 @@ const FormPersonalDetails = (props) => {
 
         <InputGroup>
           <Form.Check
+            className="m-4"
             name={"qOneSTwo"}
             value={"Yes"}
             checked={values.investment === "Yes"}
@@ -41,6 +42,7 @@ const FormPersonalDetails = (props) => {
             label={"Yes"}
           />
           <Form.Check
+            className="m-4"
             name={"qOneSTwo"}
             checked={values.investment === "No"}
             value={"No"}
@@ -57,6 +59,7 @@ const FormPersonalDetails = (props) => {
             2. How much was the investment? :{" "}
           </InputGroup.Text>
           <FormControl
+             className="m-4"
             disabled={disableValue}
             type="number"
             min="0"
