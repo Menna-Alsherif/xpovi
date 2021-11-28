@@ -5,10 +5,12 @@ const FormPersonalDetails = (props) => {
   const [disableValue, setDisableValue] = useState(true);
 
   const handleSubmit = (event) => {
-    console.log(values.investment);
+    console.log(values.investmentvalue , typeof values.investmentValue);
     if (values.investment === "") {
-      if (values.investmentValue > -1) event.preventDefault();
+      if (values.investmentValue === undefined) {
+       event.preventDefault();
       event.stopPropagation();
+      }
     } else {
       next(event);
     }
@@ -69,19 +71,18 @@ const FormPersonalDetails = (props) => {
             <FormControl
               className="m-4"
               disabled={disableValue}
-              type="number"
-              min="1"
-              defaultValue={values.investment}
+              value={values.investmentValue}
               onKeyDown={(evt) => {
                 if (
                   (evt.keyCode >= 48 && evt.keyCode <= 57) ||
                   evt.keyCode === 8
                 ) {
-                  handleChange("investment");
+                 
                 } else {
                   evt.preventDefault();
                 }
               }}
+              onChange={handleChange("investmentValue")}
               placeholder="Enter Investment Value"
               aria-describedby="basic-addon1"
             />
