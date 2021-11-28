@@ -5,12 +5,13 @@ const Confirm = (props) => {
   const next = (e) => {
     e.preventDefault();
     const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(props.values)
-  };
-  fetch('https://reqres.in/api/posts', requestOptions)
-  .then(response => response.json())
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(props.values),
+    };
+    fetch("https://reqres.in/api/posts", requestOptions).then((response) =>
+      response.json()
+    );
     props.nextStep();
   };
 
@@ -35,11 +36,33 @@ const Confirm = (props) => {
 
         <br />
         <ListGroup>
-          <ListGroup.Item>Business Type: {businessType}</ListGroup.Item>
-          <ListGroup.Item>Age Bracket : {ageBracket}</ListGroup.Item>
-          <ListGroup.Item>All Industries : {allIndustries}</ListGroup.Item>
-          <ListGroup.Item>Investment : {investment}</ListGroup.Item>
-          <ListGroup.Item>Investment Value : {investmentValue}</ListGroup.Item>
+          {businessType !== "" ? (
+            <ListGroup.Item>Business Type: {businessType}</ListGroup.Item>
+          ) : (
+            ""
+          )}
+          {ageBracket !== "" ? (
+            <ListGroup.Item>Age Bracket : {ageBracket}</ListGroup.Item>
+          ) : (
+            ""
+          )}
+          {allIndustries !== "" ? (
+            <ListGroup.Item>All Industries : {allIndustries}</ListGroup.Item>
+          ) : (
+            ""
+          )}
+          {investment !== "" ? (
+            <ListGroup.Item>Investment : {investment}</ListGroup.Item>
+          ) : (
+            ""
+          )}
+          {investmentValue > 0 ? (
+            <ListGroup.Item>
+              Investment Value : {investmentValue}
+            </ListGroup.Item>
+          ) : (
+            ""
+          )}
         </ListGroup>
 
         <br />

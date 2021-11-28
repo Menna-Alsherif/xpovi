@@ -11,7 +11,7 @@ const UserForm = () => {
     ageBracket: "",
     allIndustries: "",
     investment: "",
-    investmentValue: 0,
+    investmentValue: 0
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
