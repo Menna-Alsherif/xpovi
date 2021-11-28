@@ -56,7 +56,7 @@ const Confirm = (props) => {
           ) : (
             ""
           )}
-          {investmentValue > 0 ? (
+          {investmentValue > 0 && investment === "Yes" ? (
             <ListGroup.Item>
               Investment Value : {investmentValue}
             </ListGroup.Item>
