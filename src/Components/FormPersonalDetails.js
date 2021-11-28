@@ -77,7 +77,7 @@ const FormPersonalDetails = (props) => {
               onKeyDown={(evt) => {
                 if (
                   (evt.keyCode >= 48 && evt.keyCode <= 57) ||
-                  evt.keyCode === 8
+                  evt.keyCode === 8 || (evt.keyCode >= 96 && evt.keyCode <= 105)
                 ) {
                 } else {
                   evt.preventDefault();
