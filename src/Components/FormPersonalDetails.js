@@ -8,9 +8,8 @@ const FormPersonalDetails = (props) => {
     console.log(values.investmentValue, typeof values.investmentValue);
     if (
       values.investment === "" ||
-      values.investmentValue === 0 ||
-      values.investmentValue === ""  ||
-      values.investmentValue === "0"
+      (values.investmentValue === 0 &&  values.investment === "Yes" )||
+      (values.investmentValue === "0" && values.investment === "Yes")
     ) {
       event.preventDefault();
       event.stopPropagation();
