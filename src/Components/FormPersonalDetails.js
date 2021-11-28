@@ -5,12 +5,14 @@ const FormPersonalDetails = (props) => {
   const [disableValue, setDisableValue] = useState(true);
 
   const handleSubmit = (event) => {
-    console.log(values.investmentvalue , typeof values.investmentValue);
-    if (values.investment === "") {
-      if (values.investmentValue === undefined) {
-       event.preventDefault();
+    console.log(values.investmentValue, typeof values.investmentValue);
+    if (
+      values.investment === "" ||
+      values.investmentValue === 0 ||
+      values.investmentValue === ""
+    ) {
+      event.preventDefault();
       event.stopPropagation();
-      }
     } else {
       next(event);
     }
@@ -77,7 +79,6 @@ const FormPersonalDetails = (props) => {
                   (evt.keyCode >= 48 && evt.keyCode <= 57) ||
                   evt.keyCode === 8
                 ) {
-                 
                 } else {
                   evt.preventDefault();
                 }
